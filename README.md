@@ -1,4 +1,4 @@
-# Currency microcervices application
+# Web application with microservices architecture
 
 ![](c4currency.drawio.png)
 
