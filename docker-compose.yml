@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  eureka:
+    build:
+      context: ./eureka
+    ports:
+      - "8001:8761"
+  business:
+    build:
+      context: ./business
+    ports:
+      - "8002:8020"
+    depends_on:
+      - "eureka"
+  gateway:
+    build:
+      context: ./gateway
+    ports:
+      - "8003:8010"
+    depends_on:
+      - "business"
