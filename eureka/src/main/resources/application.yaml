@@ -3,6 +3,7 @@ spring:
     name: eureka
 server:
   port: 8761
+  forward-headers-strategy: framework
 eureka:
   client:
     registerWithEureka: false
